@@ -1,0 +1,11 @@
+<import src="../../../wxSearch/wxSearch.wxml"/>
+<view>
+  <view class = "nav">
+  <image alt = "" src = "../../../images/back.png" class = "navimg" catchtap='backpage'></image>
+    商城首页
+  </view>
+  <view class = "search">
+    <input placeholder="搜索好货"  class = "searchBox1" bindfocus="wxSerchFocus" bindinput="wxSearchInput" bindblur="wxSearchBlur" bindconfirm = "go" confirm-type = "搜索"></input>
+    <template is="wxSearch" data="{{wxSearchData}}"/>
+  </view>
+</view>

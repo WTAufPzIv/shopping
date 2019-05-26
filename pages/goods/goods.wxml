@@ -1,0 +1,83 @@
+ <!--pages/goods/goods.wxml-->
+<view class = "nav">
+<image alt = "" src = "../../images/back1.png" class = "navimg"  catchtap='backpage'></image>
+    商品详情
+</view>
+
+<view class = "chat" catchtap='tocomment'>
+<image alt = '' src = "../../images/chat.png" style = "position:relative;width:35px;height:35px;top:8px;"></image>
+</view>
+
+
+<import src="../template/template.wxml" />
+ 
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{goodsImg[pageid]}}">
+    <swiper-item>
+      <image src="{{item.imgUrl}}" data-src="{{item.imgUrl}}" bindtap="previewImage" mode="widthFix"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!--商品价格和商品描述-->
+<view>
+<view class="product-name-wrap">
+    {{goods[pageid].name}}
+  </view>
+  <view class="product-price-wrap">
+      <view>
+        <p class="product-price-new">￥{{goods[pageid].price}}</p>  
+        <p class="product-price-old">原价￥{{goods[pageid].privilegePrice}}</p> 
+      </view>
+  </view>
+</view>
+
+ <view class="details"> 
+  <scroll-view scroll-y="true">
+    <text style = "color:rgb(120,120,120);font-size:12px;position:relative;top:-8px;margin-left:10px;">产地:{{goods[pageid].where}}</text>
+    <text style = "color:rgb(120,120,120);font-size:12px;position:relative;top:-8px;margin-left:10px;display:block">借卖商家:{{goods[pageid].jiemai}}</text>
+    <text style = "color:rgb(120,120,120);font-size:12px;position:relative;top:-8px;margin-left:10px;">供货商家:{{goods[pageid].gonghuo}}</text>
+    <block wx:for-items="{{goods[pageid].detailImg}}" wx:key="name">
+       <image class="image_detail" src="{{item}}" mode="widthFix"/> 
+    </block>
+    <view class="temp"></view>
+  </scroll-view>
+ </view>   
+<!-- 底部悬浮栏 --> 
+<view class="detail-nav">
+  <image bindtap="toCar" src="../../images/kefu.png" style = "width:55px;height:30px;"/>  
+  <view class="line_nav"></view>
+   <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}"> -->
+   <image bindtap="addLike" src="{{isLike?'../../images/havelike.png':'../../images/like.png'}}" style = "width:50px;height:30px;margin-top:18px;"/> 
+   <!-- </picker> -->
+  <button data-goodid="1"  class="button-green" bindtap="toggleDialog" >加入购物车</button>
+  <button class="button-red" bindtap="immeBuy" formType="submit">立即购买 </button>
+</view>
+
+
+<!--加入购物车-->
+
+<view class="dialog {{ showDialog ? 'dialog--show' : '' }}" style = "z-index:10000;">
+      <view class="dialog__mask" bindtap="toggleDialog" />
+      <view class="dialog__container">
+        <view class="row">
+          <icon bindtap="closeDialog" class="image-close" type="cancel" size="25"/>
+          <image class="image-sku" src="{{goods[pageid].imgUrl}}"></image>
+          <view class="column">
+            <text class="sku-price">￥{{goods[pageid].totalMoney}}</text>
+            <text class="sku-title">销量 {{goods[pageid].buyRate}} 件</text>
+            <text class="sku-title">商品编码：{{goods[pageid].goodsId}}</text>
+          </view>
+        </view>
+        <text class="border-line"></text>
+        <view class="row">
+          <text >购买数量</text>
+          <view class="quantity-position">
+              <!-- <template is="quantity"  data="{{ ...item,index:index}}" />  -->
+               <template is="quantity" data="{{ ...goods[pageid],index:1}}" /> 
+          </view>
+        </view>
+        <text class="border-line"></text>
+
+        <button data-goodid="{{goods.goodsId}}" class="button-addCar" bindtap="addCar" formType="submit">确定</button>
+      </view>
+    </view>

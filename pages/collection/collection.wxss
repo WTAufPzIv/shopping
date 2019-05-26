@@ -1,0 +1,112 @@
+page{
+  background-color: rgb(230,230,230);
+}
+.nav{
+  height: 80px;
+  background-color: #1C4D78;
+  width: 100%;
+  color:white;
+  font-size: 20px;
+  text-align: center;
+  line-height: 110px;
+  position: fixed;
+  top: 0px;
+  z-index: 10000;
+}
+.navimg{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-left: 5%;
+  top:8px;
+}
+.sort-wrap{
+  width: 100%;
+  height:70rpx;
+  background-color:white;
+  position: fixed;
+  top:80px;
+  z-index: 10000;
+}
+.sort-btn{
+  width:50%;
+  float:left;
+  text-align: center;
+  height:70rpx;
+  line-height:70rpx;
+  font-size: 25rpx;
+  color:#333;
+}
+.sort-btn image{
+  width: 15rpx;
+  height: 30rpx;
+  position: relative;
+  margin-left:6rpx;
+  top:3px;
+}
+.falls1{
+  padding:2px;
+  width: 100%;
+  /* background-color: rgb(240,240,240); */
+  position: relative;
+  top:123px;
+}
+.fallsitem{
+  width:46%;
+  height:320px;
+  background-color: white;
+  float: left;
+  position: relative;
+  margin-left: 3px;
+  margin-top: 2px;
+  padding:5px;
+  line-height: 18px;
+}
+.fallsitem1{
+  width:93%;
+  height:325px;
+  background-color: white;
+  position: relative;
+  margin-left: 3px;
+  margin-top: 2px;
+  padding:10px;
+  line-height: 18px;
+}
+.fallsitemimg{
+  width: 100%;
+  height: 70%;
+}
+.fallsitemimg1{
+  width: 60px;
+  height: 60px;
+}
+.storeImg{
+  width: 33.33333%;
+  height: 120px;
+  float:left;
+  position: relative;
+  left: 0px;
+  background-color: yellow;
+}
+.storeImgbox{
+  width: 100%;
+  height: 240px;
+  background-color: blue;
+  position: relative;
+  top:0px;
+}
+.fallsitemtext{
+  width: 100%;
+  font-size: 26rpx;
+  color: black;
+  line-height: 2px;
+}
+.fallsitemtext1{
+  width: 100%;
+  font-size: 15px;
+  color: black;
+  line-height: 2px;
+  position: relative;
+  left: 15px;
+  top:-10px;
+}

@@ -1,0 +1,85 @@
+<view class = "nav">
+    <image alt = "" src = "../../../../images/back1.png" class = "navimg" catchtap='backpage'></image>
+    订单详情
+</view>
+
+
+<view class = "bottom">
+  <view class = "ordercap">申请售后</view>
+  <view class = "ordercap">再次购买</view>
+</view>
+
+<view class = "head">
+{{goods.state}}
+<image alt = "" src = "../../../../images/fly.png" class = "head_img"></image>
+</view>
+
+
+
+<view class = "addressbox">
+  <image alt = "" src = "../../../../images/gps.png" class = "addressgpsimg"></image>
+  <view class = "addresstextbox">
+    <text style = "position:relative;font-size:14px;top:15px;">{{address.name}}</text>
+    <text style = "position:relative;font-size:14px;color:rgb(120,120,120); margin-left:10px;top:15px;">{{address.phone}} \n</text>
+    <text style = "position:relative;top:18px;">{{address.address1}} \t\t</text>
+    <text style = "position:relative;top:18px;">{{address.address2}} \t\t</text>
+    <text style = "position:relative;top:18px;">{{address.address3}} \t\t</text>
+    <text style = "position:relative;top:18px;">{{address.address4}} \t\t</text>
+    <text style = "position:relative;top:18px;">{{address.address5}} \t\t</text>
+  </view>
+</view>
+
+
+
+<view class = "order">
+  <view class = "orderItembox">
+      <view class = "orderhead" catchtap='btocpage'>借卖商家: {{goods.btoc}} \t 
+        <image alt = "" src = "../../../../images/goto.png" style = "width:14px;height:14px;position:relative;top:2px;"></image>
+      </view>
+      <view class = "orderimgbox">
+        <image class = "orderimg" alt = "" src = "{{goods.img}}"></image></view>
+      <view class = "ordertext">
+        {{goods.name}}
+      </view>
+      <view class = "orderprice">
+        ￥{{goods.price}}
+      </view>
+</view>
+<view class = "br"></view>
+
+<view class = "orderPrice">
+  <view class = "priceLeft">商品总价</view>
+  <view class = "priceright">￥{{goods.price*goods.num}}</view>
+  <view class = "priceLeft">运费</view>
+  <view class = "priceright">￥{{goods.yunfei}}</view>
+  <view class = "priceLeft">税费</view>
+  <view class = "priceright">￥{{goods.tax}}</view>
+  <view class = "priceLeft">订单总价</view>
+  <view class = "priceright">￥{{goods.price*goods.num+goods.yunfei+goods.tax}}</view>
+  <view class = "br" style = "position:relative;top:77px;"></view>
+  <view class = "priceLeft" style = "color:black;font-size:15px;height:40px;line-height:36px;">实付款</view>
+  <view class = "priceright"  style = "color:red;font-size:15px;height:40px;line-height:36px;">￥{{goods.pay}}</view>
+</view>
+</view>
+
+<view class = "orderInfo">
+  <view  class = "orderinfohead"></view>
+  <text style = " font-size: 14px;line-height: 5px;position:relative;margin-left:10px;top:5px;">订单信息 \n</text>
+  <view class = "infoleft" >订单编号</view>
+  <view class = "inforight">{{goods.orderNum}}</view>
+  <view class = "infoleft">商品借卖方</view>
+  <view class = "inforight">{{goods.btoc}}</view>
+  <view class = "infoleft">商品厂商</view>
+  <view class = "inforight">{{goods.firm}}</view>
+  <view class = "infoleft">创建时间</view>
+  <view class = "inforight">{{goods.createtime}}</view>
+  <view class = "infoleft">付款时间</view>
+  <view class = "inforight">{{goods.paytime}}</view>
+  <view class = "infoleft">发货时间</view>
+  <view class = "inforight">{{goods. sendtime}}</view>
+</view>
+
+<view class = "orderbottom">
+  <image alt = "" src = "../../../../images/smail.png" class = "orderbottomimg"></image>
+  <text class = "orderbottomtext">感谢您的购物，期待您的下次光临</text>
+</view>

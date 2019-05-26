@@ -1,0 +1,130 @@
+/* pages/mine/mine.wxss */
+.nav{
+  height: 75px;
+  background-color: #1C4D78;
+  width: 100%;
+  font-size: 20px;
+  color: white;
+  line-height: 105px;
+  position: fixed;
+  z-index: 10000;
+}
+.navimg{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-left: 5%;
+  top:8px;
+}
+.userinfo {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(28,77,120);
+   width: 100%; 
+  height: 300rpx;
+  top:70px;
+}
+.userinfo-btn{
+  margin-top: 50rpx;
+  background: none !important;
+  color: #fff !important;
+  font-size: 40rpx;
+}
+.account-bg {
+  width: 100%;
+  height: 150rpx;
+}
+.userinfo-avatar {
+  width: 108rpx;
+  height: 108rpx;
+  margin: 40rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #fff;
+}
+/* 订单 */
+.order {
+  display: flex;
+  position: relative;
+  top:80px;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 90rpx;
+}
+.myorder-text {
+  font-size: 34rpx;
+  color: black;
+  margin: 20rpx;
+  width: 40%;
+}
+.myorderlook-text {
+  font-size: 32rpx;
+  color: gray;
+  position: relative;
+  right: 20rpx;
+  width: 60%;
+  text-align: right;
+}
+.next-image {
+  width: 20rpx;
+  height: 25rpx;
+  position: relative;
+  right: 10rpx;
+}
+.navs {
+  display: flex;
+  position: relative;
+  top:80px;
+}
+.nav-item {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20rpx;
+}
+.nav-item .nav-image {
+  width: 55rpx;
+  height: 55rpx;
+  margin: 5rpx;
+}
+.nav-item text {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: gray;
+}
+/* 列表 */
+.person-list {
+  display: flex;
+  position: relative;
+  top:95px;
+  flex-direction: column;
+  align-items: left;
+}
+.list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80rpx;
+}
+.item-image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 20rpx;
+}
+.item-text {
+  color: gray;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.person-line {
+  width: 80%;
+  height: 2rpx;
+  background: lightgray;
+  margin-left: 90rpx;
+}
+

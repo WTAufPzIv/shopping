@@ -1,0 +1,26 @@
+<view class = "nav">
+    <image alt = "" src = "../../../images/back.png" class = "navimg" catchtap='backpage'></image>
+    我的评价
+</view>
+
+<view class = "commentbox">
+  <view  class = "avatar"><image alt = "" src = "{{user.avatar}}" class = "avatar1"></image>
+  </view>
+  <text class = "nickname">{{user.nickname}} \n</text>
+  <view class = "time">{{time}}</view>
+  <text class = "content">{{content}}</text>
+  <block wx:for = "{{contentimg}}">
+    <image alt = "" src = "{{item}}" class = "comimg"></image>
+  </block>
+  <view class = "orderItembox">
+      <view class = "orderimgbox">
+        <image class = "orderimg" alt = "" src = "{{img}}"></image></view>
+      <view class = "ordertext">
+        {{name}}
+      </view>
+      <view class = "orderprice">
+        ￥{{price}}
+      </view>
+</view>
+</view>
+<view class = "br"></view>

@@ -1,0 +1,20 @@
+@import "../../../../style/weui.wxss";
+page{
+  background-color: rgb(240,240,240);
+}
+.nav{
+  height: 80px;
+  background-color: white;
+  width: 100%;
+  font-size: 20px;
+  z-index: 10000;
+  line-height: 105px;
+  position: fixed;
+}
+.navimg{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-left: 5%;
+  top:8px;
+}

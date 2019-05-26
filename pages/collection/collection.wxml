@@ -1,0 +1,72 @@
+<view>
+  <view class = "nav">
+    
+    收藏
+  </view>
+  <view class='sort-wrap'>
+    <view class='sort-btn' style = "color:{{sort1color}}" bindtap="choosesort" >
+      商品
+    </view>
+    <view class='sort-btn' data-index="{{daindex1}}" bindtap="choosesort1" style = "color:{{sort2color}}">
+      店铺
+      <image src="{{imageurl1}}"></image>
+    </view>
+  </view>
+
+
+  <view class = "falls1" style = "display:{{page1}}">
+    <scroll-view
+        scroll-y = "true"
+        enable-back-to-top = "true"
+        style = "position:relative;top:0px;"
+    >
+      <view class = "fallsitem" wx:for = "{{res}}">
+        <image alt = "" src = "{{item.img}}" class = "fallsitemimg" bindtap='goodspage' id = "{{item.id}}"></image>
+        <text class = "fallsitemtext">
+          {{item.title}}
+        </text>
+        <text style = "color:red;font-size:24px;float:left; position: absolute;bottom:3px;">
+          ￥
+        </text>
+        <text style = "left:30px;color:red;font-size:18px;float:left;position: absolute;bottom:3px;">
+          {{item.prize}}
+        </text>
+        <text style = "color:rgb(140,140,140);position:relative;left:110px;font-size:12px;">
+          已售：{{item.sales}}
+        </text>
+      </view>
+    </scroll-view>
+  </view>
+
+
+  <view class = "falls1" style = "display:{{page2}}">
+    <scroll-view
+        scroll-y = "true"
+        enable-back-to-top = "true"
+        style = "position:relative;top:0px;"
+    >
+      <view class = "fallsitem1" wx:for = "{{store}}">
+        <view style = "width:60px;height:60px;float:left;overflow: hidden;border-radius: 200px;"><image alt = "" src = "{{item.img}}" class = "fallsitemimg1"></image></view>
+        <text class = "fallsitemtext1">
+          {{item.name}}
+        </text>
+        <text style = "color:rgb(120,120,120);font-size:12px;position:relative;left:15px;top:-25px;">
+          商品数量:{{item.num}}
+        </text>
+        <view class = "storeImgbox">
+          <!-- <block wx:for = "{{store.imgUrl}}"><image alt = "" src = "{{index}}" class = "storeImg"></image></block> -->
+          <image alt = "" src = "{{item.imgUrl[0]}}" class = "storeImg"></image>
+          <image alt = "" src = "{{item.imgUrl[1]}}" class = "storeImg"></image>
+          <image alt = "" src = "{{item.imgUrl[2]}}" class = "storeImg"></image>
+          <image alt = "" src = "{{item.imgUrl[3]}}" class = "storeImg"></image>
+          <image alt = "" src = "{{item.imgUrl[4]}}" class = "storeImg"></image>
+          <image alt = "" src = "{{item.imgUrl[5]}}" class = "storeImg"></image>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+
+
+</view>
+

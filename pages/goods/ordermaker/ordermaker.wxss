@@ -1,0 +1,111 @@
+@import "../../../style/weui.wxss";
+page{
+  background-color: rgb(240,240,240);
+}
+.nav{
+  height: 80px;
+  background-color: white;
+  width: 100%;
+  font-size: 20px;
+  z-index: 10000;
+  line-height: 105px;
+  position: fixed;
+}
+.navimg{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-left: 5%;
+  top:8px;
+}
+.radio-group {
+    border-bottom: 1px solid #ddd;
+}
+.radio {
+    display: block;
+    border-top: 1px solid #ddd;
+    padding: 5px;
+    background-color: white;
+}
+.orderItembox{
+  width: 92%;
+  height: 125px;
+  /* background-color: yellow; */
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+   position: relative;
+  top:85px;
+  margin-left: 7px;
+  z-index: 10000;
+}
+.orderhead{
+  height: 25px;
+  width: 98%;
+  /* background-color: green; */
+  font-size: 15px;
+  color: red;
+  text-align: right;
+}
+.orderimg{
+  width: 100px;
+  height: 100px;
+  position: relative;
+
+}
+.orderimgbox{
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 10px;
+  float: left;
+}
+.ordertext{
+  display: -webkit-box;
+  position: relative;
+  margin-left: 112px;
+  width: 68%;
+  height: 60px;
+  font-size: 15px;
+  text-overflow:ellipsis;
+  background-color: white;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+  /* overflow: hidden; */
+}
+.orderprice{
+  background-color: white;
+  position: relative;
+  height: 20px;
+  width: 53%;
+  font-size: 13px;
+  color:rgb(120,120,120);
+  top:14px;
+  margin-left:112px;
+}
+.ordertotal{
+  background-color: white;
+  position: relative;
+  height: 20px;
+  width: 96%;
+  text-align: right;
+  top: 30px;
+  font-size: 15px;
+}
+.ordercapsule{
+  position: relative;
+  width: 80px;
+  height: 25px;
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color:rgb(100,100,100);
+  border-radius: 100px;
+  float:left;
+  top:43px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 25px;
+  margin-left: 27px;
+}

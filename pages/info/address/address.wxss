@@ -1,0 +1,32 @@
+@import '../../../utils/weui.wxss';
+.nav{
+  height: 75px;
+  background-color: #1C4D78;
+  width: 100%;
+  font-size: 20px;
+  color:white;
+  line-height: 105px;
+  position: fixed;
+  z-index: 10000;
+}
+.navimg{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-left: 5%;
+  top:8px;
+}
+.weui-cells:before{
+  top:0;
+  border-top:1rpx solid white;
+  }
+.weui-cell{
+  line-height: 3.5rem;
+}
+.weui-cells:after{
+  bottom:0;border-bottom:1rpx solid white
+}
+
+.weui-btn{
+  width: 80%;
+}

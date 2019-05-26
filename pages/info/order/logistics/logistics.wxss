@@ -1,0 +1,85 @@
+page{
+  background-color: rgb(240,240,240);
+}
+.nav{
+  height: 80px;
+  background-color: white;
+  width: 100%;
+  font-size: 20px;
+  z-index: 10000;
+  line-height: 105px;
+  position: fixed;
+}
+.navimg{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-left: 5%;
+  top:8px;
+}
+/* pages/order/order_wl.wxss */
+.goods{
+  margin: 50rpx;
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 15rpx;
+  /* float: left; */
+  margin-top:50px;
+}
+.logistics{
+  margin-top: -55rpx;
+  font-size: 28rpx;
+
+}
+.br{
+  width: 95%;
+  margin-left: 2.5%;
+  margin-bottom: 30rpx;
+  background: #d0d0d0;
+  height: 1rpx;
+  margin-top:60px;
+}
+ 
+/* 下部分 */
+.logistics_centent{
+  position: absolute;
+  left: 100rpx;
+  font-size: 28rpx;
+  color: #666
+}
+.icon{
+  width: 20rpx;
+  height: 20rpx;
+  background: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin:0rpx 20rpx 0rpx 40rpx;
+}
+.in{
+  border: 1rpx solid red;
+  animation: my_animation 2s infinite;
+}
+@keyframes my_animation{
+    100% {  
+    transform: scale(2);  
+    background-color: transparent;  
+    }  
+}
+ 
+.no_in{
+  border: 1rpx solid #d0d0d0;
+}
+.on{
+  background: #d0d0d0;
+  height: 100rpx;
+  width: 1px;
+  margin-left: 50rpx;
+}
+.page_row{
+  position: relative;
+  top:50px;
+}
+.order{
+  position: relative;
+  top:0px;
+}

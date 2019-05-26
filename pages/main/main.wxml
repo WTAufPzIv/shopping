@@ -1,0 +1,89 @@
+<import src="../../wxSearch/wxSearch.wxml"/>
+<view>
+  <view class = "nav">
+    东购跨境商城
+  </view>
+  <view class = "search">
+    <view class = "searchBox" catchtap='searchpage'>搜索海外好货</view>
+    <image alt = '' src = "../../images/message.png" class = "messageIcon" bindtap='messagepage'></image>
+  </view>
+  <view class = "main_body">
+    <view class = "top">
+      <view class = "top1">
+        <image alt = "" src = "../../images/top1.png" class = "topimg"></image><text class = "toptext">品质严选</text>
+      </view>
+      <view class = "top2">
+        <image alt = "" src = "../../images/top2.png" class = "topimg"></image><text class = "toptext">质量担保</text>
+      </view>
+      <view class = "top3">
+        <image alt = "" src = "../../images/top3.png" class = "topimg"></image><text class = "toptext">售后无忧</text>
+      </view>
+    </view>
+    <view class = "swipertotal">
+      <swiper   class = "carousel" indicator-dots = "true" autoplay = "true" interval="4000" indicator-color="rgb(180,180,180)"  indicator-active-color='white' circular='true'>
+        <block wx:for = "{{lunbo}}"><swiper-item><image alt = "" src = "{{item}}"></image></swiper-item>
+        </block>
+      </swiper>
+      <view class = "classicontotalbox">
+        <view class = "classIconbox" catchtap='searchpage1'><image alt = "" src = "../../images/food.png" class = "classIcon"></image><text style = "font-size:12px;display:block;top:7px;position:relative;color:rgb(26,55,107)">美食</text></view>
+        <view class = "classIconbox" catchtap='searchpage2'><image alt = "" src = "../../images/home.png" class = "classIcon"></image><text style = "font-size:12px;display:block;top:7px;position:relative;color:rgb(26,55,107)">居家</text></view>
+        <view class = "classIconbox" catchtap='searchpage3'><image alt = "" src = "../../images/cloth.png" class = "classIcon"></image><text style = "font-size:12px;display:block;top:7px;position:relative;color:rgb(26,55,107)">穿搭</text></view>
+        <view class = "classIconbox" catchtap='searchpage4'><image alt = "" src = "../../images/cs.png" class = "classIcon"></image><text style = "font-size:12px;display:block;top:7px;position:relative;color:rgb(26,55,107)">电子</text></view>
+        <view class = "classIconbox" catchtap='moreclass'><image alt = "" src = "../../images/more.png" class = "classIcon"></image><text style = "font-size:12px;display:block;top:7px;position:relative;color:rgb(26,55,107)">更多</text></view>
+      </view>
+    </view>
+    <view class = "falls">
+      <view class = "fallshead">
+        <view style = "width:15px;height:30px;background-color: rgb(28,77,120);float:left;position:relative;top:10px;left:10px;"></view>
+        <text style = "position:relative;margin-left:15px;">今日精选</text>
+      </view>
+      <scroll-view
+        scroll-y = "true"
+        enable-back-to-top = "true"
+        style = "position:relative;top:-20px;"
+      >
+        <view wx:for="{{brands}}" data-id="{{index}}" wx:key="{{index}}" class = "fallsitem" catchtap='goodspage'>
+          <view class = "fallsitemtextbox">
+            <view class = "fallsitemtext">
+              {{item.name}}
+              <!-- <view class = "fallsitemprize">
+                ￥183
+              </view> -->
+            </view>
+          </view>
+          <image alt = "" src = "{{item.imgUrl}}" class = "fallsitemimg"></image>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  
+</view>
+
+<view class="welfare-container" style = "position:relative;top:120px;"> 
+  <view class="category-title">
+    <text class="title">福利专场</text>
+    <view class="line_name">
+      <text>每天早10晚8准时上新</text>
+    </view>
+  </view>  
+  <scroll-view scroll-y="true">
+      <view class="welfares">
+         <block wx:for-items="{{newGoods}}" wx:key="id">
+          <view class="welfares-good" catchtap="catchTapCategory" data-name="{{item.name}}" data-goodsid="{{item.id}}">
+            <view>
+              <image src="{{item.imgUrl}}" class="welfares-image" mode="widthFix"/> 
+            </view>
+            <view class="product-name">
+              {{item.name}}
+            </view>
+            <view class="product-price-wrap">
+              <p class="product-price-new">￥{{item.price}}</p>  
+              <p class="product-price-old">￥{{item.privilegePrice}}</p> 
+              <p class="discount">{{item.discount}}折</p>  
+            </view>
+            
+          </view>
+        </block> 
+      </view>
+  </scroll-view>  
+</view>   

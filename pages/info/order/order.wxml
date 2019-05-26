@@ -1,0 +1,60 @@
+<view class = "nav">
+    <image alt = "" src = "../../../images/back.png" class = "navimg" catchtap='backpage'></image>
+    我的订单
+</view>
+
+
+  <scroll-view
+    scroll-x = "true"
+    class = "orderscroll"
+    scroll-into-view="{{page}}" 
+    scroll-with-animation="true" 
+  >
+    <view class = "orderclass" id = "all" style = "color:{{orderclass1}}" bindtap='allorder'>全部</view>
+    <view class = "orderclass" id = "nopay" style = "color:{{orderclass2}}" bindtap = "nopayorder">待付款</view>
+    <view class = "orderclass" id = "nosend" style = "color:{{orderclass3}}" bindtap='nosendorder'>待发货</view>
+    <view class = "orderclass" id = "noaccept" style = "color:{{orderclass4}}" bindtap='noaccepyorder'>待收货</view>
+    <view class = "orderclass" id = "nocomment" style = "color:{{orderclass5}}" bindtap='nocommentorder'>待评价</view>
+    <view class = "orderclass" id = "ser" style = "color:{{orderclass6}}">退换/售后</view>
+  </scroll-view>
+
+  <!-- 没有订单 -->
+<view class = "empty" style = "display:{{empty}}">.
+  <image alt = "" src = "../../../images/noorder.png" style = "width:65%;height:65%;position:relative;"></image>
+  <view style = "color:rgb(110,110,110);font-size:17px;position:relative;top:10px;">
+    暂时没有订单
+  </view>
+</view>
+
+
+<!-- 有订单 -->
+<scroll-view
+  scroll-y = "true"
+  class = "orderscrool1"
+>
+  <block wx:for = "{{orderList}}">
+    <view class = "orderItembox">
+      <view class = "orderhead">{{item.state}}</view>
+      <view class = "orderimgbox"><image class = "orderimg" alt = "" src = "{{item.img}}"></image></view>
+      <view class = "ordertext">
+        {{item.name}}
+      </view>
+      <view class = "orderprice">
+        ￥{{item.price}}
+      </view>
+      <view class = "ordertotal">
+        共{{item.num}}件商品  合计￥{{item.price*item.num}}
+      </view>
+      <!-- <view>{{item.state}}</view> -->
+      <view  class = "ordercapsule" catchtap='orderdetailPage' id = '{{item.id}}'>
+        订单详情
+      </view>
+      <view class = "ordercapsule" catchtap = "logisticsPage">
+        物流信息
+      </view>
+      <view class = "ordercapsule" catchtap='havetaken' id = "{{item.statenum}}">
+        {{item.capstate}}
+      </view>
+    </view>
+  </block>
+</scroll-view>

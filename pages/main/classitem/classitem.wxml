@@ -1,0 +1,43 @@
+<view>
+  <view class = "nav">
+    <image alt = "" src = "../../../images/back1.png" class = "navimg" catchtap='backpage'></image>
+    商城首页
+  </view>
+  <view class='sort-wrap'>
+    <view class='sort-btn' style = "color:{{sort1color}}" bindtap="choosesort" >
+      综合
+    </view>
+    <view class='sort-btn' data-index="{{daindex1}}" bindtap="choosesort1" style = "color:{{sort2color}}">
+      销量
+      <image src="{{imageurl1}}"></image>
+    </view>
+    <view class='sort-btn' data-index="{{daindex2}}" bindtap="choosesort2" style = "color:{{sort3color}}">
+      价格
+      <image src="{{imageurl2}}"></image>
+    </view>
+  </view>
+  <view class = "falls">
+    <scroll-view
+        scroll-y = "true"
+        enable-back-to-top = "true"
+        style = "position:relative;top:0px;"
+    >
+      <view class = "fallsitem" wx:for = "{{res[pageid]}}">
+        <image alt = "" src = "{{item.img}}" class = "fallsitemimg" bindtap='goodspage'></image>
+        <text class = "fallsitemtext">
+          {{item.title}}
+        </text>
+        <text style = "color:red;font-size:24px;float:left">
+          ￥
+        </text>
+        <text style = "color:red;font-size:18px;float:left">
+          {{item.prize}}
+        </text>
+        <text style = "color:rgb(140,140,140);position:relative;left:45px;font-size:12px;">
+          已售：{{item.sales}}件
+        </text>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+

@@ -1,0 +1,94 @@
+/* pages/addressList/addressList.wxss */
+page{  
+  display: flex;  
+  flex-direction: column;  
+  height: 100%; 
+  background-color: rgb(240,240,240); 
+}  
+.scroll{
+  position: relative;
+  top:80px;
+  
+}
+.nav{
+  height: 75px;
+  background-color: #1C4D78;
+  width: 100%;
+  font-size: 20px;
+  color:white;
+  line-height: 105px;
+  position: fixed;
+}
+.navimg{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-left: 5%;
+  top:8px;
+}
+.product-name-wrap{
+  /* margin: 0px 10px; */
+  font-size: 14px;
+  color: #404040;
+  /* position: relative;
+  top:50px; */
+}
+.xian{
+  position: absolute;
+  top:18%;
+  margin-left:80%;
+  background-color: rgb(200,200,200);
+  width: 2px;
+  height: 60%;
+}
+.ui-list-item-info{
+  margin: 5px 0px;
+  font-size: 18px;
+  color:black;
+}
+.ui-list-item-address{
+  font-size: 15px;
+  color:rgb(120,120,120);
+  width:70%;
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+.ui-list-item-time{
+  margin: 5px 0px;
+  font-size: 15px;
+  color:rgb(120,120,120);
+}
+.ui-list-item-del{
+  position: relative;
+  margin-left:55%;
+  color: rgb(120,120,120);
+  top:-23px;
+
+}
+/* 分割线 */
+.separate {
+  margin: 5px 0px;
+  height: 2rpx;
+  background-color: #f2f2f2;
+}
+.add-address{
+  margin: 0 auto;
+  margin-top: 125px;
+  width: 150px;
+  height: 35px;
+  border: 1px rgb(140,140,140) solid;
+  line-height: 35px;
+  text-align: center;
+  color: rgb(140,140,140);
+  border-radius: 5rpx;
+      display: block;
+      font-size: 15px;
+}
+.add-img{
+  position: relative;
+  top:5px;
+  margin-right: 15rpx;
+  width: 20px;
+  height: 20px;
+}

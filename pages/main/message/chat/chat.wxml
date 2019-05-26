@@ -1,0 +1,84 @@
+<view>
+  <view class = "nav">
+  <image alt = "" src = "../../../../images/back1.png" class = "navimg" catchtap='backpage'></image>
+    消息 
+  </view>
+
+
+                                            <!-- 聊天功能模块 -->
+
+<view class='homeView'>
+    <scroll-view scroll-y style="height:605px;" scroll-top='{{scrolltop}}'>
+        <view class='listView'>
+            <block wx:for="{{serverMsg}}" wx:key='*this'>
+                <!--  -->
+                <view  wx:if = "{{item.openid==openid&&item.target==targetid}}" class='rightView'>
+                    <view class='name'>{{item.nickname}}</view>
+                    <view class='imgmsg'>
+                        <view class = "rightmsgbox"><image alt = "" src = "{{item.imgUrl}}" style = "width:200px;height:120px;display:{{item.imgornot}}"></image><view>{{item.msg}}</view></view>
+                        <view class= "avatarbox">
+                        <!-- 我这用的是自己另一个服务的图片 -->
+                            <image class='touimg' src='{{item.avatar}}'></image>
+                        </view>
+                    </view>
+                </view>
+                <view wx:elif="{{item.openid!=openid&&item.nickname==targetid}}" class='leftView'>
+                    <view class='name'>{{item.nickname}}</view>
+                    <view class='imgmsgleft'>
+                        <view class= "avatarbox">
+                        <!-- 我这用的是自己另一个服务的图片 -->
+                            <image class='touimg' src='{{item.avatar}}'></image>
+                        </view>
+                        <view  class = "leftmsgbox"><image alt = "" src = "{{item.imgUrl}}" style = "width:200px;height:120px;display:{{item.imgornot}}"></image><view>{{item.msg}}</view></view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+    <!-- <view class='sendView'>
+        <input bindinput='sendTextBind' placeholder="输入聊天内容" value='{{sendText}}' />
+        <button bindtap='sendBtn' type="primary">发送</button>
+    </view> -->
+
+<view class="message"> 
+
+<view class = "chooseemoj" style = "display:{{chooseEmoj}}">
+<!-- <view  bindtap ="close" style = "position: absolute; width: 36px;height: 36px;right: 0px;top:0px;z-index:100000;"><image alt = "" src = "../../../../images/close.png"  class = "msgAddClose"></image></view> -->
+      
+      
+      <scroll-view scroll-y  style="height: 190px;"><block wx:for = "{{connectemojiO}}"><text style = "letter-spacing:30px;position:relative;margin-left:20px;font-size:25px;" catchtap='clickEmoj' id = "{{item}}">{{item}}</text></block></scroll-view>
+</view>
+
+  <form bindreset="cleanInput" class="sendMessage">
+  <input type="text" placeholder="请输入聊天内容.." value="{{sendText}}"        bindinput='sendTextBind'></input>
+ 
+  <view class="add" bindtap='increase'>+</view>
+ 
+  <button type="primary" bindtap='sendBtn' formType="reset" size="small" button-hover="blue">发送</button>
+ 
+  </form>
+ 
+  <view class='increased {{aniStyle?"slideup":"slidedown"}}' wx:if="{{increase}}">
+ <view  bindtap ="close1" style = "position: absolute; width: 36px;height: 36px;right: 0px;top:80px;z-index:100000;"><image alt = "" src = "../../../../images/close.png"  class = "msgAddClose1"></image></view>
+  <view class="image" bindtap='chooseImage'>
+    <image alt = "" src = "../../../../images/img.png" class = "chatimg_add"></image> 
+  </view>
+  <view class="emoj" bindtap='chooseEmoj'>
+    <image alt = "" src = "../../../../images/emoj.png" class = "chatimg_add"></image> 
+  </view>
+ 
+  </view>
+ 
+</view>
+
+
+
+</view>
+
+
+
+
+
+
+
+</view>

@@ -1,0 +1,87 @@
+/*画廊*/
+page{
+  background-color: white;
+}
+.nav{
+  height: 80px;
+  background-color: white;
+  width: 100%;
+  font-size: 20px;
+  z-index: 10000;
+  line-height: 105px;
+  position: fixed;
+}
+.navimg{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-left: 5%;
+  top:8px;
+}
+.gallery {
+	/*margin-bottom: 100rpx;*/
+	position: relative;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+  top:90px;
+}
+.button-upload{
+  width: 80px;
+  height: 80px;
+}
+/*每张图片所占容器*/
+.item {
+	position: relative;
+	margin: 5px;
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+
+/*删除按钮*/
+.delete {
+	position: absolute;
+	height: 20px;
+	bottom: 0;
+	width: 20px;
+	/* background: #ccc; */
+	/* opacity: .8; */
+  text-align: center;
+  right:2px;
+  top:2px;
+}
+
+.delete image {
+	position: relative;
+	width: 20px;
+	height: 20px;
+  top:-2px;
+  margin-left:10px;
+}
+
+.textarea-container {
+	background: white;
+	padding: 10px;
+  position: relative;
+  top:180px;
+}
+
+/*输入框*/
+textarea {
+	background: #fcfcfc;
+	border: 1px solid #e2e2e2;
+	border-radius: 3px;
+	padding: 10px;
+	font-size: 14px;
+	min-height: 120px;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+
+/*提交按钮*/
+.submit {
+	margin: 0 10px;
+  position: relative;
+  top:180px;
+}

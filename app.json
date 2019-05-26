@@ -1,0 +1,61 @@
+{
+  "pages":[
+    "pages/main/main",
+    "pages/main/message/message",
+    "pages/main/message/chat/chat",
+    "pages/main/search/search",
+    "pages/main/search/searchpage/searchpage",
+    "pages/main/class/class",
+    "pages/main/classitem/classitem",
+    "pages/collection/collection",
+    "pages/shopping/shopping",
+    "pages/info/info",
+    "pages/info/addressList/addressList",
+    "pages/info/address/address",
+    "pages/info/order/order",
+    "pages/info/order/logistics/logistics",
+    "pages/info/order/orderdetail/orderdetail",
+    "pages/info/order/evaluate/evaluate",
+    "pages/info/comment/comment",
+    "pages/goods/goods",
+    "pages/goods/ordermaker/ordermaker",
+    "pages/goods/ordermaker/payresult/payresult",
+    "pages/goods/allcomment/allcomment"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#1C4D78",
+    "navigationBarTitleText": "东购商城",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "blue",
+    "navigationStyle":"custom"
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "逛一逛",
+        "iconPath": "images/list.png",
+        "selectedIconPath": "images/list1.png"
+      },
+      {
+        "pagePath": "pages/collection/collection",
+        "text": "收藏",
+        "iconPath": "images/like.png",
+        "selectedIconPath": "images/like1.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "购物车",
+        "iconPath": "images/shopping.png",
+        "selectedIconPath": "images/shopping1.png"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "text": "我的",
+        "iconPath": "images/info.png",
+        "selectedIconPath": "images/info1.png"
+      }
+    ]
+   }
+}

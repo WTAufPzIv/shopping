@@ -1,0 +1,68 @@
+<view class = "nav" >
+  </view>
+<view class="userinfo">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="userinfo-btn"> 获取微信授权 </button>
+  <block wx:else>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </block>
+</view>
+
+<view class="separate"></view>
+
+<view class="order">
+  <text class="myorder-text">我的订单 </text>
+  <text class="myorderlook-text" catchtap='toOrder'>查看全部订单 ></text>
+</view>
+<view class="line"></view>
+
+<view class="navs">
+    <view class="nav-item" catchtap="toOrder">
+      <image src="../../images/pay.png" class="nav-image" />
+      <text>待付款</text>
+    </view>
+    <view class="nav-item" catchtap="toOrder">
+      <image src="../../images/hezi.png" class="nav-image" />
+      <text>待发货</text>
+    </view>
+    <view class="nav-item" catchtap="toOrder">
+      <image src="../../images/car.png" class="nav-image" />
+      <text>待收货</text>
+    </view>
+    <view class="nav-item" catchtap="toOrder">
+      <image src="../../images/comment.png" class="nav-image" />
+      <text>待评价</text>
+    </view>
+    
+</view>
+
+<view class="separate"></view>
+<view class="person-list">
+
+  <!-- <view class="list-item">
+    <image class="item-image" src="../../images/card.png"></image>
+    <text class="item-text">优惠券</text>
+    </view>
+  <view class="person-line"></view> -->
+ <view class="list-item">
+    <image class="item-image" src="../../images/address.png"></image>
+    <text class="item-text" bindtap="myAddress">收货地址</text>
+  </view>
+  <view class="person-line"></view>
+  <!-- <view class="list-item">
+    <image class="item-image" src="../../images/shouhou.png"></image>
+    <text class="item-text">售后记录</text>
+  </view>
+  <view class="person-line"></view> -->
+  <view class="list-item" >
+    <image class="item-image" src="../../images/Mcomment.png"></image>
+    <text class="item-text" catchtap='mycomment'>我的评价</text>
+  </view>
+  <view class="person-line"></view>
+  <view class="list-item">
+    <image class="item-image" src="../../images/women.png"></image>
+    <text class="item-text" catchtap='ser'>在线客服</text>
+  </view>
+  <view class="person-line"></view>
+</view>
+<view class="separate"></view>

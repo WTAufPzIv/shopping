@@ -1,0 +1,75 @@
+<view class = "nav">
+   购物车
+</view>
+
+
+<!-- 购物车为空时 -->
+<view class="J-shopping-cart-empty" hidden="{{hidden1}}">
+<view class="shopping-cart-empty">
+        <view class="bg"></view> 
+        <!-- <view class="cart"></view> -->
+        <view>
+          <image alt = "" src = "../../images/empty.png" class = "cart"></image>
+        </view>
+        <text class='empty-text' style = "position:relative;top:55px;">这里什么都没有</text>  
+        <p></p>
+        <navigator url="/pages/main/main" open-type="switchTab">
+         <a  class="button button-primary" style = "position:relative;top:60px;" href="//m.vip.com">
+            去抢购
+        </a>
+        </navigator>
+    </view>
+</view> 
+
+
+
+<!-- 购物车不为空时 -->
+<view class="scroll" hidden="{{hidden}}">
+<scroll-view class="scroll" scroll-y="true">
+  <view class="separate"></view>
+  <view wx:for="{{carts}}">
+    <view class="cart_container">  
+      <view  wx:if="{{!item.isSelect}}">
+            <icon class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}"  type="circle" size="20"></icon>
+      </view>
+      <view wx:elif="{{item.isSelect}}">
+            <icon class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}"  type="success" color="#f0145a" size="20"></icon>
+      </view>
+
+      <image class="item-image" src="{{item.imgUrl}}"></image>
+      <import src="../template/template.wxml" />
+      <view class="column">
+        <text class="title">{{item.title}}</text>
+         <image bindtap="delGoods" id="img{{index}}" data-index="{{index}}" src="../../images/del.png" style = "position:absolute;top:10px;width:25px;height:25px;right:-100px;"></image> 
+        <view class="row">
+          <text class="sku-price">￥{{item.price * item.count}}</text>
+          <view class="sku">
+              <template is="quantity"  data="{{ ...item,index:index}}" /> 
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <view class="separate"></view>
+  </view>
+</scroll-view>
+</view>
+
+
+ <view class="bottom_total" style = "display:{{hidden}}">
+  <view class="bottom_line"></view>
+
+  <view class="row">
+
+    <view  wx:if="{{!isAllSelect}}">
+            <icon class="item-allselect" bindtap="allSelect" type="circle" size="20"></icon>
+      </view>
+      <view wx:elif="{{isAllSelect}}">
+            <icon class="item-allselect" bindtap="allSelect" type="success" color="#f0145a" size="20"></icon>
+      </view>
+    <text class="small_text">全选</text>
+    <text>合计:￥ </text>
+    <text class="price">{{totalMoney}}</text>
+    <button class="button-red" bindtap="toBuy" formType="submit">去结算      </button>
+  </view>
+</view> 

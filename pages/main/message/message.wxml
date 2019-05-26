@@ -1,0 +1,21 @@
+<view>
+  <view class = "nav">
+  <image alt = "" src = "../../../images/back1.png" class = "navimg" catchtap='backpage'></image>
+    消息列表
+  </view>
+  <view style = "display:{{nomessage}}" class = "nomessage">
+    ———— 无消息 ————
+  </view>
+
+
+
+  <view wx:for = "{{message}}" class = "havemessage" style = "display:{{havemessage}}">
+    <view class = "message" catchtap='chatpage' id = "{{item.nickname}}">
+      <view id = "{{item.nickname}}" class = "messageimgbox"><image id = "{{item.nickname}}" class = "messageimg" alt = "" src = "{{item.img}}"></image></view>
+      <text id = "{{item.nickname}}" class = "messagename">{{item.nickname}}</text>
+      <text id = "{{item.nickname}}" class = "messagentime">{{item.time}}</text>
+      <br></br>
+      <!-- <text id = "{{item.nickname}}" class = "messagetext">{{short1}}</text> -->
+    </view>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+<view class = "nav">
+<image alt = "" src = "../../../images/back1.png" class = "navimg"  catchtap='backpage'></image>
+    全部评价
+</view>
+
+
+<scroll-view
+scroll-y = true
+style = "height:600px;"
+>
+<block wx:for = "{{commentlist}}" wx:key = "item">
+<view class = "commentbox">
+  <view  class = "avatar"><image alt = "" src = "{{item.avatar}}" class = "avatar1"></image>
+  </view>
+  <text class = "nickname">{{item.nickname}} \n</text>
+  <view class = "time">{{item.time}}</view>
+  <text class = "content">{{item.content}}</text>
+  <block wx:for = "{{item.contentimg}}" wx:for-item="XXXX" wx:key="XXXX">
+    <image alt = "" src = "{{XXXX}}" class = "comimg"></image>
+  </block>
+</view>
+<view class = "br"></view>
+</block>
+</scroll-view>

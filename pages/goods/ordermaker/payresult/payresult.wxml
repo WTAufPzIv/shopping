@@ -1,0 +1,58 @@
+<view class = "nav">
+    <image alt = "" src = "../../../../images/back.png" class = "navimg" catchtap='backpage'></image>
+    交易成功
+</view>
+
+<view class="page" style = "position:relative;top:50px;">
+    <view class="weui-msg">
+        <view class="weui-msg__icon-area">
+            <icon type="success" size="93"></icon>
+        </view>
+        <view class="weui-msg__text-area">
+            <view class="weui-msg__title">感谢您的购买！！！</view>
+            <view class="weui-msg__desc">商家会在24小时之内发货，请耐心等待</view>
+        </view>
+        <!-- <view class="weui-msg__opr-area">
+            <view class="weui-btn-area">
+                <button class="weui-btn" type="primary">推荐操作</button>
+                <button class="weui-btn" type="default">辅助操作</button>
+            </view>
+        </view> -->
+        <!-- <view class="weui-msg__extra-area">
+            <view class="weui-footer">
+                <view class="weui-footer__links">
+                    <navigator url="" class="weui-footer__link">底部链接文本</navigator>
+                </view>
+                <view class="weui-footer__text">Copyright © 2008-2016 weui.io</view>
+            </view>
+        </view> -->
+    </view>
+</view>
+
+<view class="weui-form-preview" style = "position:relative;top:50px;">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">付款金额</view>
+                    <view class="weui-form-preview__value_in-hd">¥429.00</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">商品</view>
+                    <view class="weui-form-preview__value">雅诗兰黛（Estee Lauder）持妆无瑕气垫粉霜</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">订单编号:</view>
+                    <view class="weui-form-preview__value">1220253155622</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">交易时间</view>
+                    <view class="weui-form-preview__value">2019-3-12 12:25:16</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__ft" style = "height:50px;line-height:17px;">
+                <text class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active" bindtap='gotoorder'>
+                我的订单
+                </text>
+            </view>
+        </view>
